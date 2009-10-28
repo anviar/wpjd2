@@ -1,0 +1,6 @@
+Options -Indexes
+
+<FilesMatch "\.(php|inc)$">
+Order Deny,Allow
+Deny from all
+</FilesMatch>

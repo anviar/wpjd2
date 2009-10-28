@@ -1,0 +1,53 @@
+Пакет для отображения статуса пользователя в сетти Jabber v0.1
+Может отдавать статус в разных форматах:
+- изображение
+- xhtml
+- xml
+- json
+
+Скрины с результатами тестирования скрипта на локалке в папке ./test/demo.
+
+
+0. Требования
+0.1 PHP 5.1+ с установленым расширением mysqli
+0.2 Доступ к БД Jabber сервера jabberd2
+
+
+1. Нсастройки
+1.1 ./Сonfig/Db.php - наcтройки для подключения к БД
+    Важно!!!
+    Пользователь БД должен иметь минимальные права доступа к БД.
+    Пример:
+    GRANT SELECT ( `collection-owner` , `status` , `show` , `last-login` , `last-logout`
+    ) ON `jabberd2`.`status`
+    TO 'jabberd2_wp'@'localhost';
+1.2 ./Config/Output.php - настройки вывода
+
+
+2. Установка
+2.1 Скопировать папку ../Jabber в рабочую директорию
+2.2 Удалить папку ./test
+2.3 Настроить скрипт для роботы посредством изминения файлов в директории ./Сonfig
+
+
+3. Доступ к скрипту
+Доступ к скрипту осуществляеться по ссылке: [xocт]/[путь к рабочей директории]/Jabber/webpresence.php[?параметры]
+
+
+4. Параметры
+4.1 jid compatible string jid=[username@host] - обязательный параметр, JID пользователя на сервере
+4.1 string skin=[crystal(default)|jabberbulb] - тема оформления
+4.2 string rtype=[image(default)|html|xhml|xml|json] - тип ответа
+
+
+5. Пример использования:
+5.1 Вставка картинки стаутса в сообщения на форуме(например):
+<img src="[url]/Jabber/webpresence.php?jid=username@host[&skin=[crystal|jabberbulb]">
+5.2 Ссылка на свой статус в Jabber (формат html):
+<a href="[url]/Jabber/webpresence.php?jid=username@host&rtype=html[&skin=[crystal|jabberbulb]">Мой статус :)</a>
+5.3 Получения и обработка статуса пользователя програмами(формат json или xml):
+[url]/Jabber/webpresence.php?jid=username@host&rtype=[json|xml]
+
+
+Support:
+phpdev@easyveasy.com
