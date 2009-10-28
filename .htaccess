@@ -1,0 +1,3 @@
+RewriteEngine  on
+#RewriteBase     /
+RewriteRule     ^(.*)\/(.*)\/(.*)\/([a-z]*)\.png$  webpresence.php?jid=$3@$2.$1&skin=$4
