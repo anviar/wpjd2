@@ -47,7 +47,3 @@
 <a href="[url]/Jabber/webpresence.php?jid=username@host&rtype=html[&skin=[crystal|jabberbulb]">Мой статус :)</a>
 5.3 Получения и обработка статуса пользователя програмами(формат json или xml):
 [url]/Jabber/webpresence.php?jid=username@host&rtype=[json|xml]
-
-
-Support:
-phpdev@easyveasy.com
