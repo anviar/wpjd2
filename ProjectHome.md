@@ -1,0 +1,1 @@
+This is local web-presence service for jabberd2 servers.
